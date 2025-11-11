@@ -1,5 +1,8 @@
 -- Creada para ejecutarse en SQL Server Management Studio
 -- Crear tabla de categorias
+CREATE DATABASE gastro_app;
+USE gastro_app;
+
 CREATE TABLE Categorias (
     id_categoria INT PRIMARY KEY,
     nombre_categoria VARCHAR(50) NOT NULL
