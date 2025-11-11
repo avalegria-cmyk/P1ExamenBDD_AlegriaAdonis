@@ -1,0 +1,25 @@
+use("gastro_app");
+//INSERCION DE VARIOS DOCUMENTOS
+
+db.platos.insertMany([
+  {
+    nombre_plato: 'Cerveza Artesanal',
+    precio: 4,
+    id_categoria: 3,
+    es_alcoholica: true,
+    tamano_ml: 500
+  },
+  {
+    nombre_plato: 'Pasta Carbonara',
+    precio: 10,
+    id_categoria: 2,
+    alergenos: ['gluten', 'lactosa', 'huevo']
+  },
+  {
+    nombre_plato: 'Jugo Natural de Naranja',
+    precio: 1.50,
+    id_categoria: 3,
+    es_alcoholica: false,
+    tamano_ml: 350
+  }
+]);

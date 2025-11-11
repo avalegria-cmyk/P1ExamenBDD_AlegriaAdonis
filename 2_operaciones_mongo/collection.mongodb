@@ -1,0 +1,39 @@
+use('gastro_app');
+
+db.createCollection('platos', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      required: ['nombre_plato', 'precio', 'id_categoria'],
+      additionalProperties: false,
+      properties: {
+        _id: {
+          bsonType: 'objectId' 
+        },
+        nombre_plato: {
+          bsonType: 'string',
+        },
+        precio: {
+          bsonType: 'number',
+          minimum: 0,
+        },
+        id_categoria: {
+          bsonType: 'number',
+        },
+        // flexibilidad para diferentes tipos de platos (si no se agregan estas propiedades, al insertar estas caranteristicas no permitira la insercion)
+        es_alcoholica: {
+          bsonType: 'bool',
+        },
+        tamano_ml: {
+          bsonType: 'int',
+        },
+        alergenos: {
+          bsonType: 'array',
+          items: {
+            bsonType: 'string'
+          },
+        },
+      },
+    }
+  }
+});

@@ -1,0 +1,6 @@
+use('gastro_app')
+// actualizar el precio de la Cerveza Artesanal aumentando 0.50
+db.platos.updateOne(
+  { nombre_plato: 'Cerveza Artesanal' },
+  { $inc: { precio: 0.50 } }
+);

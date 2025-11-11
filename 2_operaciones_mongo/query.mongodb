@@ -1,0 +1,10 @@
+use('gastro_app')
+
+//  Mostrar todos los productos
+//db.platos.find();
+
+// Mostrar productos que son bebidas alcohólicas con precio menor a 5.00
+db.platos.find({
+  es_alcoholica: { $exists: true },
+  precio: { $lt: 5.00 }
+});

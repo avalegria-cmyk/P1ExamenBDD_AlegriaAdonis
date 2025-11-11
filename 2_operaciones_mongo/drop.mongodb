@@ -1,0 +1,4 @@
+//USO DE LA BASE DE DATOS
+use('gastro_app');
+//LIMPIEZA DE REGISTROS
+db.platos.drop();
